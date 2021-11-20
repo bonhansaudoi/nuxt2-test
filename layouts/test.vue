@@ -1,9 +1,9 @@
 <template>
 	<div>  
-		<client-only>  
+	 	<client-only>  
 			<ModalForm />   
 			<ModalProfile /> 
-		</client-only> 
+		</client-only>  
 
 		<main>  
 			<client-only> 
@@ -26,16 +26,19 @@
 <script> 
 import ModalForm from "~/components/modal/ModalForm";  
 import ModalProfile from "~/components/modal/ModalProfile"; 
-  
+// import { accordation } from "~/plugins/toggle.js";  
 export default { 
 	layout: 'test',
 	components: { 
 		ModalForm, 
 		ModalProfile
 	},  
+	mounted () { 
+		// accordation(); 
+	}, 
 	data () {
 		return {
-			search: true, //false
+			search: true, 
 			logo: { 
 				text: '4WAO',
 				link: '/', 
@@ -146,7 +149,7 @@ export default {
 				{
 					rel: 'stylesheet',
 					// href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
-					href:"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+					//href:"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 				}
 			]
 		}

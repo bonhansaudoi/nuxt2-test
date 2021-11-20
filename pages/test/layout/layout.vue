@@ -2,13 +2,16 @@
   <div>  
     <div class="container-col lg:my-8">  
       <aside class="lg:w-1/6">
+<!-- <client-only>
         <Sidebar />  
+</client-only> -->
       </aside>
 
       <div class="lg:w-5/6 lg:mx-8 ">
         <div class="card"> 
           <div class="content">
             <post-back /> 
+            
             <h1>test</h1>
 
             <h2>Nuxt</h2> 
@@ -45,22 +48,20 @@
               <a class="a" href="#">Lorem ipsum </a>
             </article>
 
-            <h2>accordation</h2>
-            
+            <h2>accordation</h2> 
             <article>
               <h3>readmore</h3>
 
               <div class="accordation">
-                <div class="accordation-btn cursor-pointer"> 
+                <div class="accordation-btn"> 
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                     Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
                   </p> 
                   <svg-readmore></svg-readmore>
                 </div>   
-                <div class="accordation-content hidden md:mt-6
-                  space-y-4 md:space-y-6"
-                >
+                <div class="accordation-content hidden">
+                
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                     Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
@@ -75,19 +76,16 @@
                   </p>  
                 </div>    
               </div>
-
-              <h3>readmore</h3>
 
               <div class="accordation">
-                <div class="accordation-btn cursor-pointer">
+                <div class="accordation-btn">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                     Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
                   </p> 
                   <svg-readmore></svg-readmore>
                 </div>   
-                <div class="accordation-content hidden md:mt-6
-                  space-y-4 md:space-y-6"
+                <div class="accordation-content hidden "
                 >
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -102,10 +100,8 @@
                     Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
                   </p>  
                 </div>    
-              </div>
-              
-
-            </article> 
+              </div> 
+            </article>  
           </div>
         </div>
       </div>  
@@ -114,9 +110,17 @@
 </template>
 
 <script>
+import { accordation } from "~/plugins/toggle.js";
 export default {  
-  layout: 'test',  	
+  layout: 'test', 
+  mounted () {
+    accordation();
+  },    	
 }
+
+
+     
+	
 </script>
 
 <style lang="postcss">

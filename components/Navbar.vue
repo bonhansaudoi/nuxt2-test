@@ -4,9 +4,7 @@
 		lg:flex px-4 py-4 lg:py-2
 		uppercase lg:text-lg"
 	>  
-		<div class="navbar-logo
-			flex justify-between items-center"
-		> 
+		<div class="navbar-logo flex justify-between items-center">  
 			<a :href="logo.link"
 				class="logo inline-flex items-center 
 					text-2xl font-bold uppercase tracking-wide"  
@@ -30,7 +28,7 @@
 			lg:flex lg:flex-row lg:flex-grow
 			lg:justify-between lg:items-center 
  			px-4 pt-16 pb-4 lg:p-0 mt-4 lg:mt-0
-			border-2 rounded-lg border-gray-400 lg:border-none"
+			Tborder lg:border-none"
 		>    
 			<div class="navbar-link   
 				flex flex-col lg:flex-row lg:items-center" 
@@ -58,7 +56,7 @@
 					</button> 
 					<div class="dropdown-content 
 						hidden lg:absolute lg:w-48 
-						border-2 rounded-lg border-gray-400
+						Tborder
 						p-4 space-y-2 mt-1 lg:mt-3 text-base font-semibold" 
 					>  
 						<NuxtLink 
@@ -89,7 +87,7 @@
 							lg:left-2 lg:right-2
 							mt-1 lg:mt-4 p-2   
 							text-base font-semibold
-							border-2 rounded-lg border-gray-400"  
+							Tborder"  
 						>    
 							<NuxtLink 
 								v-for="item in item.content"
@@ -106,9 +104,9 @@
 			<div class="navbar-right
 				lg:flex lg:items-center lg:ml-auto  
 				lg:space-x-6 mt-2 lg:mt-0"
-			> 
+			>  
 				<Search v-if="search" />
-
+				
 				<slot></slot> 
 			</div> 
 		</div> 
@@ -116,7 +114,7 @@
 </template> 
 
 <script> 
-import { hamberger, dropdown, accordation } from "~/plugins/toggle";
+import { hamberger, dropdown, accordation } from "~/plugins/toggle.js";
 export default {
 	props: {
 		logo: Object,  

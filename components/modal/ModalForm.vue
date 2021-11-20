@@ -1,8 +1,5 @@
-<template>   
-  <div class="modal-form 
-    absolute inset-0 lg:overflow-hidden
-    hidden z-70"
-  >   
+ <template>   
+  <div class="modal-form"> 
     <div class="form-content center"> 
       <FormSignin />
       <FormSignup /> 
@@ -13,7 +10,6 @@
 <script>
 import FormSignin from "~/components/modal/FormSignin.vue"; 
 import FormSignup from "~/components/modal/FormSignup.vue"; 
-
 import { modalForm } from "~/plugins/toggle";
 export default { 
 	components: {

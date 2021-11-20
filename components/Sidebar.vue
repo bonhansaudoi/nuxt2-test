@@ -1,4 +1,4 @@
-<template> 
+<template>  
 	<nav class="nav-side 
 		flex flex-col
 		card px-2 py-2
@@ -11,43 +11,43 @@
 			class="px-2 py-2 text-gray-400"
 		> 
 			{{ item.text }}
-		</NuxtLink>  
+		</NuxtLink>   
 
 		<div class="sidebar relative"
-			v-for="item in dropdown" 
-			:key="item.text" 
-		>   
-			<button class="sidebar-btn  
-				w-full inline-flex items-center p-2
-				text-left uppercase	text-gray-400"  
-			>
-				{{ item.text }} 
-				<svg-arrow-down></svg-arrow-down>
-			</button> 
-			<div class="sidebar-content  
-				hidden w-full 
-				border rounded-md shadow-md border-gray-500
-				p-4 space-y-2 mt-1 text-base font-semibold"  
-			>  
-				<NuxtLink  
-					v-for="item in item.content"
-					:key="item.text" 
-					:to="item.link" 
-					class="block"
-				> 
-					{{ item.text }}
-				</NuxtLink>  
-			</div>  
-		</div>
-	</nav>	
+				v-for="item in dropdown" 
+				:key="item.text" 
+			>   
+				<button class="sidebar-btn  
+					w-full inline-flex items-center p-2
+					text-left uppercase	text-gray-400"  
+				>
+					{{ item.text }} 
+					<svg-arrow-down></svg-arrow-down>
+				</button> 
+				<div class="sidebar-content  
+					hidden w-full 
+					border rounded-md shadow-md border-gray-500
+					p-4 space-y-2 mt-1 text-base font-semibold"  
+				>  
+					<NuxtLink  
+						v-for="item in item.content"
+						:key="item.text" 
+						:to="item.link" 
+						class="block"
+					> 
+						{{ item.text }}
+					</NuxtLink>  
+				</div>  
+		</div> 
+ 	</nav>	
 </template>
 
 <script>  
-import { sidebar } from "~/plugins/toggle";
+import { sidebar } from "~/plugins/toggle.js";
 export default { 
 	props: {
 		links: Array,
-		dropdown: Array, 
+		dropdown: Array 
   },
 	mounted () {
 		sidebar();  

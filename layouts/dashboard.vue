@@ -1,16 +1,18 @@
 <template> 
-  <main>  
-    <client-only> 
-      <navbar 
-        :logo="logo"  
-        :menu ="menu"
-        :search="search" 
-      >  
-      </navbar> 
-    </client-only> 
+  <div>
+    <main>  
+      <client-only> 
+        <navbar 
+          :logo="logo"  
+          :menu ="menu"
+          :search="search" 
+        >  
+        </navbar> 
+      </client-only> 
 
-    <Nuxt />   
-  </main> 
+      <Nuxt />   
+    </main> 
+  </div>
 </template> 
 
 <script> 

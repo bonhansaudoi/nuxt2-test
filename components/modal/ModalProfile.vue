@@ -1,11 +1,8 @@
 <template>   
-  <div class="modal-profile
-    absolute inset-0 lg:overflow-hidden
-    hidden z-70"
-  >   
-    <div class="profile-content bg-red-100"> 
+  <div class="modal-profile"> 
+    <div class="profile-content"> 
       <div class="user-profile">
-        <div class="container-card bg-white">
+        <div class="container-card">
           <div class="content">
             <h1>UserProfile</h1>
           </div> 
@@ -25,6 +22,4 @@ export default {
 }
 </script> 
 
-<style lang="postcss"> 
-.modal-profile {@apply bg-black;} 
-</style> 
+<style lang="postcss"></style>  

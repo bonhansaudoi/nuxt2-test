@@ -1,7 +1,7 @@
 <template> 
 	<div class="container-col lg:my-8">  
     <aside class="lg:w-1/6">
-			<Sidebar :links="links" :dropdown="dropdown"  />  
+		 <Sidebar :links="links" :dropdown="dropdown" />   
 		</aside>
 
     <div class="lg:w-5/6 lg:mx-8">
@@ -64,7 +64,7 @@ export default {
 	layout: 'dashboard',  
   data() {
 		return {
-			headLine: "Nuxt dashboard",
+			headLine: "Nuxt dashboard", 
 			links: [         
 				{
 					text: "home",

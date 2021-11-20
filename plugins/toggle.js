@@ -139,6 +139,7 @@ function modalForm() {
       closeModal(); 
     });    
 	}
+
 	
   signin.onclick = function () {
     modalForm.style.display = "block";
