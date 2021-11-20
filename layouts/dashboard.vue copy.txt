@@ -1,0 +1,65 @@
+<template>
+  <div>
+      <!-- <client-only> </client-only>  -->
+      <v-app dark v-if="authenticated && userInfo">
+         <DashboardNavbar /> 
+         
+         <main class="my-15"> 
+            <v-container fluid>
+               <v-row justify="center" align="center">
+                  <v-col cols="12" sm="8" md="10"> 
+AUTHENTICATED: {{authenticated}}                     
+<br>
+USERINFO: {{userInfo}}
+<br>
+FORM: {{authInfo}}   
+
+                     <nuxt />
+                  </v-col>
+               </v-row>
+            </v-container>
+         </main>
+      </v-app>
+      
+  </div>
+</template> 
+
+<script>
+import DashboardNavbar from '~/components-local/dashboard/DashboardNavbar'
+import { auth } from '~/plugins/firebase.js' 
+
+export default {
+   middleware: ['auth'],
+   
+   components: {
+      DashboardNavbar
+   },  
+
+   data: () => ({}),
+      
+   created () {
+      // auth.onAuthStateChanged((user) => {   
+      //    if (user) {
+      //       this.$store.dispatch('nuxtServerInit', user)
+      //    }
+      //    else {
+      //       this.$router.push("/") 
+      //    }
+      // })  
+   }, 
+ 
+   computed: {
+      authenticated() {
+         return this.$store.state.authenticated
+      },
+
+      userInfo () {
+         return this.$store.state.userInfo
+      },
+    
+      authInfo () {
+         return this.$store.state.form.authInfo
+      }
+   } 
+}
+</script>  
