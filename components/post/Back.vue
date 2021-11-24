@@ -3,7 +3,7 @@
 		class="lg:text-lg uppercase font-semi-bold 
 			text-gray-500 hover:text-gray-700"
 		>
-		<svg-back></svg-back> 
+		<svg-Back /> 
 		Back
 	</button>
 </template>

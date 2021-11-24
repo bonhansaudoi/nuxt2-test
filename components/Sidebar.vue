@@ -24,8 +24,9 @@
 					{{ item.text }} 
 					<svg-arrow-down></svg-arrow-down>
 				</button> 
-				<div class="sidebar-content  
-					hidden w-full 
+
+				<div class="sidebar-content hidden  
+					w-full 
 					border rounded-md shadow-md border-gray-500
 					p-4 space-y-2 mt-1 text-base font-semibold"  
 				>  
@@ -42,18 +43,15 @@
  	</nav>	
 </template>
 
-<script>  
-import { sidebar } from "~/plugins/toggle.js";
+<script>
+import {sidebar} from "~/plugins/sidebar.js"; 
 export default { 
 	props: {
 		links: Array,
 		dropdown: Array 
   },
 	mounted () {
-		sidebar();  
-	},
-	data () {
-		return {}  
+	  sidebar(); 
 	}, 
 }
 </script> 

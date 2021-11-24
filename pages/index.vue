@@ -1,35 +1,21 @@
-<template> 
+<template>
 	<div>  
 		<h1>index</h1>
-		<nuxt-link to="/test">test</nuxt-link>
-	</div>
-</template>
+  </div>
+</template> 
 
-<script>
-export default { 
-	/* data () {
-		return {  
-		} 
-	},  */
-	head() {
-		return {
-			script: [
-				{
-					// src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
-				}
-			],
-			link: [
-				{
-					// rel: 'stylesheet',
-					// href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
-				}
-			]
-		}
-  }
+<script>  
+export default {  
+  components: {}, 
+  data() {
+		return {} 
+  },  
 }
 </script> 
 
-<style> 
+<style lang="postcss"> 
+/* article	{@apply lg:text-lg leading-relaxed;} */
+
 /* .center img {
 	animation: fadeIn 1s linear;
 }

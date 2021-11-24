@@ -1,38 +1,78 @@
 <template>
-	<div>  
-	<!-- 	<div>  
-			<ModalForm />   
-			<ModalProfile />
-		</div>
- -->
+	<div>   
 		<main>  
-			<!-- <navbar 
-				:logo="logo"  
-				:menu ="menu"
-				:search="search" 
-			> 
-				<NavbarAuth />
-			</navbar> -->
+			<!-- <client-only> 
+				<test-navbar 
+					:logo="logo"  
+					:menuLink="menuLink"
+					:dropdown="dropdown" 
+					:dropdownFull ="dropdownFull" 
+					:search="search" 
+				>
+					<icon-ShopIcon v-show="icon" /> 
+					<NavbarAuth />
+				</test-navbar>
+			</client-only> -->
 
 			<Nuxt />  
 
-			<post-top />
+			<post-Top />
 		</main>    	
-	</div> 	
-</template> 
+	</div> 	 
+</template>
 
-<script>  
+<script> 
 export default {  
-    // data: () => ({}),  
+	data () {
+		return {
+			search: true, 
+			icon: true,  
+			logo: { 
+				text: '4WAO',
+				link: '/',  
+      },
+			menuLink: [
+				{
+					navbarLink: [         
+						{
+							text: "home",
+							link: "/"
+						}, 
+						{
+							text: "test",
+							link: "/test"
+						},                    
+					], 
+				},
+				{
+					externalLink: [
+						{
+							text: "Links",
+							link: "https://bnsd-content.netlify.app/links/"
+						}, 
+					]
+				},
+			], 
+		}	
+	},
+	head() {
+		return {
+			script: [
+				{
+					// src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+				}
+			],
+			link: [
+				{
+					rel: 'stylesheet',
+					// href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+					//href:"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+				}
+			]
+		}
+  }
 }
-</script> 
+</script>	  
 
 <style lang="postcss">
-html {@apply text-gray-600;}  
-/* body {@apply ;}   */
-main {@apply min-h-screen ;}  
-h1 { @apply text-red-500; } 
-h2 { @apply text-blue-500; }
-h3 { @apply text-green-500; }    
-h4 { @apply text-indigo-500 text-lg uppercase; }  
 </style>  

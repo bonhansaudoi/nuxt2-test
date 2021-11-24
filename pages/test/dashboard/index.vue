@@ -35,7 +35,7 @@
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
 									Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
 								</p> 
-								<svg-readmore></svg-readmore>
+								<svg-ReadmoreIcon /> 
 							</div>   
 							<div class="accordation-content hidden md:mt-6">
 								<p>

@@ -1,0 +1,30 @@
+
+a d s l k j f ; :  t y  ##
+A D S L K J F  
+--------------------  
+cd code .  28
+mkdir assets/css/tailwind.css  chirst T@inguyen281186 
+npm run dev 
+http://localhost:3000/test/test  Cart navbar.js
+
+false
+md: lg: space false green category id externalLink
+lg:flex lg:justify-between lg:items-center Globle
+			
+---------------------- clickaway is-modal alert
+cart NavbarLogo false NavbarLink Dropdown DropdownFull slot IconShop
+auth user full PasswordForgot  CreatePostForm CreateProductForm
+index.html style.css app.css test.md index.md _slug.vue js article.md blog post
+<style> <scrypt> <div> <article> <section>  README-Link.md span _blank
+<img src="~/assets/img/" width="" height="" alt=""> _slug  z-key id
+<nuxtLink to="" target="_blank"></nuxtLink>
+----------------------
+ navbarLink.vue     loop link in vue dropdown Dropdown Sidebar NavbarLink NavbarLogo
+how to passing props to component in nuxt child post dashboard FormAuth 
+form  layout-col back z-sample auth modalForm.js modalProfile.js   ModalProfile.vue
+ deploy nuxt-content to Netlify dish pages/  Accordation.js float
+arrow-down.vue
+<test-navbarAuth></test-navbarAuth> <Bell />
+<test-userAuth></test-userAuth> <test-dropdownFull></test-dropdownFull>dropdownFull
+https://nuxt2-test.netlify.app/
+

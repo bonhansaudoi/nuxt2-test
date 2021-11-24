@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import  from "~/components/"; 
+//import  from "~/components/"; 
 
 export default {
   layout: '',
@@ -15,7 +15,8 @@ export default {
   props: {},  
   data () {
 		return {} 
-  }
+  },
+  methods: {}, 
 }
 </script>
 

@@ -7,36 +7,45 @@ ul {list-style-type: initial;
 }
 ol {list-style-type: decimal;}
 ul, ol {@apply ml-8 lg:text-lg lg:mb-6;} 
-.ul {list-style-type: none; margin-left: 0;}   
-.a {@apply text-cyan-500 hover:text-red-500;} 
+.ul {list-style-type: none; margin-left: 0;} 
 
 @layer base {
-    h1 {@apply text-3xl md:text-4xl lg:text-5xl font-semibold text-center uppercase tracking-wider;} 
-    h2 {@apply text-2xl md:text-3xl lg:text-4xl font-semibold capitalize;}
-    h3 {@apply text-xl md:text-2xl lg:text-3xl font-semibold capitalize;}  
-    h4 {@apply text-lg md:text-xl lg:text-2xl font-semibold capitalize;} 
-    article, section { @apply space-y-4 md:space-y-6;} 
-    p {@apply first-letter:text-2xl first-letter:font-semibold
-        lg:text-lg leading-relaxed;
-    } 
-     
-    button, input {@apply focus:outline-none;} 
+	h1 {@apply text-3xl md:text-4xl lg:text-5xl font-semibold text-center uppercase tracking-wider;} 
+	h2 {@apply text-2xl md:text-3xl lg:text-4xl font-semibold capitalize;}
+	h3 {@apply text-xl md:text-2xl lg:text-3xl font-semibold capitalize;}  
+	h4 {@apply text-lg md:text-xl lg:text-2xl font-semibold capitalize;} 
+	article, section { @apply space-y-4 md:space-y-6 lg:text-lg leading-relaxed;} 
+	p {@apply first-letter:text-xl first-letter:font-semibold lg:text-lg leading-relaxed;} 
+		
+	button, input {@apply focus:outline-none rounded-lg;} 
 } 
 
 @layer utilities { 
-    .main, .canvas {@apply absolute inset-0 overflow-hidden;} 
-    .canvas {@apply z-60;} 
-    .modal, .modal-form, .modal-profile {@apply fixed inset-0 z-70 hidden;}   
-    .close-modal {@apply flex justify-end cursor-pointer text-4xl text-gray-400;}  
-    .container-main {@apply p-4 md:p-6 lg:p-8 space-y-4 md:space-y-6 lg:space-y-8;}
-    .container-card {@apply lg:w-3/4 lg:mx-auto m-4 md:m-6 lg:my-8 space-y-4 md:space-y-6 lg:space-y-8;}
-    .container-col {@apply lg:flex m-4 md:m-6 lg:m-0 space-y-4 md:space-y-6 lg:space-y-0;} 
-    .card {@apply border-2 rounded-2xl shadow-md border-gray-400;}
-    .content {@apply p-4 md:p-6 space-y-4 md:space-y-6 lg:space-y-8;}  
-    .center {@apply flex flex-col justify-center items-center min-h-screen;} 
-    .center-row {@apply flex flex-wrap justify-center;}  
-    .space {@apply space-y-4 md:space-y-6 lg:space-y-8;} 
-    .Tborder { @apply border-2 rounded-lg shadow-md border-gray-400;} 
-    .accordation-content { @apply md:mt-6 space-y-4 md:space-y-6;}
-    .accordation-btn, .dropdown-btn { @apply cursor-pointer;}              
+	.main, .canvas {@apply absolute inset-0 overflow-hidden;} 
+	.canvas {@apply z-60;}
+	.modal, .modal-form  {@apply fixed inset-0 z-70;}  
+	.close ,.close-modal {@apply flex justify-end cursor-pointer text-2xl lg:text-4xl text-gray-400;}  
+	
+	.container-main {@apply p-4 md:p-6 space-y-4 md:space-y-6 lg:space-y-8;}
+	.container-card {@apply lg:mx-auto m-4 md:m-6 lg:my-8 space-y-4 md:space-y-6 lg:space-y-8 border-2 rounded-2xl shadow-md border-gray-400;}
+	.container-col {@apply lg:flex m-4 md:m-6 lg:m-0 space-y-4 md:space-y-6 lg:space-y-0;} 
+	.content {@apply p-4 md:p-6 space-y-4 md:space-y-6 lg:space-y-8;}  
+	.center {@apply flex flex-col justify-center items-center min-h-screen;} 
+	.center-row {@apply flex flex-wrap justify-center;}  
+	.space {@apply space-y-4 md:space-y-6 lg:space-y-8;} 
+	.Tborder, .card { @apply border-2 rounded-lg shadow-md border-gray-400;}
+
+/* 	.navbar { @apply w-full lg:flex px-4 py-2 lg:text-lg;} 
+	.navbar-menu { @apply lg:flex lg:flex-row lg:flex-grow
+			lg:justify-between lg:items-center 
+			px-4 pt-16 pb-4 lg:p-0 mt-4 lg:mt-0
+			border-2 rounded-lg shadow-md border-gray-400 lg:border-none;
+	}  
+	 
+	.navbar-right { @apply lg:flex lg:items-center lg:ml-auto lg:space-x-4;}   
+	
+	.accordation-content { @apply md:mt-6 space-y-4 md:space-y-6;}
+	.accordation-btn, .dropdown-btn { @apply cursor-pointer;}  */
+
+	
 } 

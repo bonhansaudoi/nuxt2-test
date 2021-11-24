@@ -1,7 +1,7 @@
 <template>
 	<section lg:mt-8>
-		<div @click="readMore"
-			class="accordation-btn cursor-pointer space-y-4"
+		<div class="accordation-btn cursor-pointer space-y-4" 
+			@click="readMore" 
 		>
 			<slot></slot>
 		</div>

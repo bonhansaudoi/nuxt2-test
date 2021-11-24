@@ -115,7 +115,7 @@ function accordation() {
 }
 
 /* modalForm */
-function modalForm() {
+/* function modalForm() {
   var modalForm = document.querySelector(".modal-form");
   var signin = document.querySelector(".signin");
   var signup = document.querySelector(".signup");
@@ -138,8 +138,7 @@ function modalForm() {
     close [i].addEventListener("click", function () {
       closeModal(); 
     });    
-	}
-
+	} 
 	
   signin.onclick = function () {
     modalForm.style.display = "block";
@@ -150,17 +149,16 @@ function modalForm() {
     modalForm.style.display = "block";
     formSignup.style.display = "block";
   }
-  
-  // *** NOTE: only .modal-center, no need to declare  
+   
   document.body.onclick = function (event) {
     if (event.target.matches('.form-content')) {
       closeModal();
     }
   } 
-}
+} */
 
 /* modalProfile */
-function modalProfile() {
+/* function modalProfile() {
   var profile = document.querySelector(".profile");
   var modalProfile = document.querySelector(".modal-profile");
   var profileContent = document.querySelector(".profile-content");
@@ -172,9 +170,19 @@ function modalProfile() {
   profileContent.onclick = function () {
     modalProfile.style.display = "none";
   } 
-}
- 
+} */
+//modalForm,modalProfile, close  
+
+
+/* function close() {
+	var modal = document.querySelector(".modal");
+	var close = document.querySelectorAll(".close");
+	close.onclick = function () {
+		modal.style.display = "none";
+	}
+} */
+
+
 export {
-	hamberger, dropdown, sidebar, accordation,
-	modalForm, modalProfile
+	hamberger, dropdown, sidebar, accordation  
 };

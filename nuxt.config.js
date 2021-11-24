@@ -1,5 +1,6 @@
 export default {
-	target: 'static',
+	// target: 'static',
+	
 	loading: {
 		color: 'blue',
 	},
@@ -20,35 +21,29 @@ export default {
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
 		]
 	},
- 
-	// Global CSS: https://go.nuxtjs.dev/config-css
-	css: [
-	],
-
-	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+	
+	css: [],	 
+	
 	plugins: [
 		{ src: '~/plugins/vue-backtotop.js', ssr: false },
 	],
-
-	// Auto import components: https://go.nuxtjs.dev/config-components
+	
 	components: true,
-
-	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-	buildModules: [
-		// https://go.nuxtjs.dev/tailwindcss
+	
+	buildModules: [ 
 		'@nuxtjs/tailwindcss',
 	],
-
-	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [
-		// https://go.nuxtjs.dev/axios
+	
+	modules: [ 
 		'@nuxtjs/axios',
-	],
+	], 
+	axios: {
+		baseURL: 'http://localhost:3000',
+	},
+	publicRuntimeConfig: {
+  	baseURL: process.env.BASE_URL || 'http://localhost:3000/',
+	},
 
-	// Axios module configuration: https://go.nuxtjs.dev/config-axios
-	axios: {},
-
-	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
 		postcss: {
 			plugins: {
@@ -57,6 +52,4 @@ export default {
 			}
 		}  
 	}
-}
-
-
+} 

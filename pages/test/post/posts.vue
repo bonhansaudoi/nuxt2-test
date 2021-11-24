@@ -5,12 +5,20 @@
 				<header class="space">
 					<post-back></post-back>
 
-					<h1>Posts</h1>        
+					<h1>{{ headLine }}</h1>        
 				</header>  
 
 				<article> 
 <!--------------------------------------------------------------------->
-
+					<div class=""
+						v-for="post of posts"
+						:key="post.index"
+					> 
+						<NuxtLink :to="`/nuxt/${post.slug}`">
+						<!-- <NuxtLink :to="'/nuxt/'+post.slug"> -->
+								{{ post.title }}
+						</NuxtLink>  
+					</div>   
 <!--------------------------------------------------------------------->
 				</article>
 			</div>    
@@ -23,7 +31,14 @@ export default {
 	layout: 'test', 
 	components: {}, 
 	data () {
-		return {}  
-	},      
+		return {
+			headLine: "Nuxt posts",
+			posts: []
+		}
+	}, 
+	async asyncData({ $axios }) {
+		const { posts } = await $axios.$get('https://api.nuxtjs.dev/rivers')
+		return { posts }
+	} 
 }
 </script> 

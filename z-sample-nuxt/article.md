@@ -1,3 +1,24 @@
+```vue 
+<template>
+
+<Canvas class="canvas" />
+
+<main>
+  <Marquee /> 
+  <Navbar /> 
+  <Header />
+
+
+  <aside></aside>
+  
+  <article class="container-card"></article> 
+
+  <TheFooter /> 
+</main>
+
+</template>
+```
+
 
 ```vue [container-card]
 <template>

@@ -5,21 +5,31 @@
 				<header class="space">
 					<post-back></post-back>
 
-					<h1>{{ headLine }}</h1> 
+					<h1>{{ title }}</h1> 
 				</header>  
 
-				<article> 
-<!--------------------------------------------------------------------->
-					<div class=""
+<!-- 
+				<article>   
+					<div  
 						v-for="post of posts"
 						:key="post.index"
 					> 
-						<NuxtLink :to="`/nuxt/${post.slug}`">
-						<!-- <NuxtLink :to="'/nuxt/'+post.slug"> -->
-								{{ post.title }}
+						<NuxtLink :to="`/test/post/${post.id}`"> 
+							{{ post.title }}	
 						</NuxtLink>  
-					</div>   
-<!--------------------------------------------------------------------->
+					</div>    
+				</article>
+ -->
+				
+				<article>
+					<div class=""
+						v-for="post of posts"
+						:key="post.slug"
+					> 
+						<NuxtLink :to="`/category/${post.slug}`">  
+							{{ post.title }}
+						</NuxtLink>  
+					</div>    
 				</article>
 			</div>    
 		</div> 
@@ -32,15 +42,19 @@ export default {
   components: {}, 
   data() {
 		return {
-			headLine: "Nuxt topics",
-			posts: []
+			title: "Nuxt posts"
 		}
-  },
-   
-  async asyncData({ $axios }) {
-		const { posts } = await $axios.$get('https://api.nuxtjs.dev/rivers')
+	},
+/*   
+ 	async asyncData({$axios}) {
+		const posts = await $axios.$get('https://api.nuxtjs.dev/posts') 
 		return { posts }
-  }
+	}
+ */
+	async asyncData({$axios}) {
+		const posts = await $axios.$get('https://api.nuxtjs.dev/rivers')
+		return { posts }
+	}
 }
 </script> 
 

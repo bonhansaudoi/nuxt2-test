@@ -13,6 +13,4 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped> 
-a {@apply text-green-500 uppercase;} 
-</style>
+<style lang="postcss" scoped></style>  

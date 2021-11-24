@@ -2,12 +2,12 @@
   <div>
     <main>  
       <client-only> 
-        <navbar 
+        <test-navbar  
           :logo="logo"  
           :menu ="menu"
           :search="search" 
         >  
-        </navbar> 
+        </test-navbar > 
       </client-only> 
 
       <Nuxt />   
@@ -16,8 +16,7 @@
 </template> 
 
 <script> 
-export default {
-  layout: 'dashboard', 
+export default { 
   middleware: [], 
   data: () => ({
     search: true, 

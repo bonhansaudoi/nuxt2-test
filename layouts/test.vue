@@ -1,50 +1,40 @@
 <template>
-	<div>  
-	 	<client-only>  
-			<ModalForm />   
-			<ModalProfile /> 
-		</client-only>  
-
+	<div> 
 		<main>  
 			<client-only> 
-				<navbar 
+				<test-navbar 
 					:logo="logo"  
-					:menu ="menu"
+					:menuLink="menuLink"
+					:dropdown="dropdown" 
+					:dropdownFull ="dropdownFull" 
 					:search="search" 
-				> 
+				>
+					<icon-ShopIcon v-show="icon" /> 
 					<NavbarAuth />
-				</navbar>
+				</test-navbar>
 			</client-only>
 
 			<Nuxt />  
 
-			<post-top />
+			<post-Top />
 		</main>    	
 	</div> 	 
 </template>
 
-<script> 
-import ModalForm from "~/components/modal/ModalForm";  
-import ModalProfile from "~/components/modal/ModalProfile"; 
-// import { accordation } from "~/plugins/toggle.js";  
-export default { 
-	layout: 'test',
-	components: { 
-		ModalForm, 
-		ModalProfile
-	},  
-	mounted () { 
-		// accordation(); 
-	}, 
+<script>  
+export default {  
+	components: {}, 
+	mounted () {},  
 	data () {
-		return {
-			search: true, 
+		return { 
+			search: true, // false
+			icon: true,  
 			logo: { 
 				text: '4WAO',
 				link: '/', 
 				color: 'orange', 
       },
-			menu: [
+			menuLink: [
 				{
 					navbarLink: [         
 						{
@@ -59,83 +49,87 @@ export default {
 							text: "dashboard",
 							link: "/test/dashboard/"
 						},                          
-					], 
-				},
- 				{		
-					dropdown: [    
-						{
-							text: " topic", 
-							content: [ 
-								{       
-									text: 'layout', 
-									link: '/test/layout/layout'    
-								},
-								{       
-									text: 'topic', 
-									link: '/test/post/'     
-								},
-								{       
-									text: 'posts', 
-									link: '/test/post/posts'    
-								},
-								{       
-									text: 'post', 
-									link: '/test/post/post'    
-								}, 
-								{       
-									text: 'web',
-									link: '/content/topic/web'   
-								},
-								{       
-									text: 'adobe',
-									link: '/content/topic/adobe'   
-								},
-								{       
-									text: 'window',
-									link: '/content/category/window'   
-								},
-								{       
-									text: 'linux',
-									link: '/content/category/linux'   
-								},
-								{       
-									text: 'english',
-									link: '/content/category/english'   
-								} 
-							] 					   
-						}, 
-					],
-				},	
-				{	 
-					dropdownFull: [ 
-						{ 
-							text: "dropdownFull",
-							content: [ 
-								{       
-									text: 'web',
-									link: '/content/topic/web'   
-								},
-								{       
-									text: 'adobe',
-									link: '/content/topic/adobe'   
-								},
-								{       
-									text: 'window',
-									link: '/content/category/window'   
-								},
-								{       
-									text: 'linux',
-									link: '/content/category/linux'   
-								},
-								{       
-									text: 'english',
-									link: '/content/category/english'   
-								} 
-							] 				   
-						},
 					] 
-				}	 
-			] 
+				},
+				{
+					externalLink: [
+						{
+							text: "Links",
+							link: "https://bnsd-content.netlify.app/links/"
+						}, 
+					]
+				}, 
+			], 
+			dropdown: [    
+				{
+					text: " topic", 
+					content: [ 
+						{       
+							text: 'text-layout', 
+							link: '/test/layout/layout'    
+						},
+						{
+							text: 'category', 
+							link: '/category'    
+						},  
+						{       
+							text: 'text-topic', 
+							link: ''     
+						}, 
+						{       
+							text: 'text-posts', 
+							link: '/test/post/'    
+						}, 
+						{       
+							text: 'web',
+							link: '/content/topic/web'   
+						},
+						{       
+							text: 'adobe',
+							link: '/content/topic/adobe'   
+						},
+						{       
+							text: 'window',
+							link: '/content/category/window'   
+						},
+						{       
+							text: 'linux',
+							link: '/content/category/linux'   
+						},
+						{       
+							text: 'english',
+							link: '/content/category/english'   
+						} 
+					] 					   
+				}, 
+			],
+			dropdownFull: [ 
+	 			/* { 
+					text: "dropdownFull",
+					content: [ 
+						{       
+							text: 'web',
+							link: '/content/topic/web'   
+						},
+						{       
+							text: 'adobe',
+							link: '/content/topic/adobe'   
+						},
+						{       
+							text: 'window',
+							link: '/content/category/window'   
+						},
+						{       
+							text: 'linux',
+							link: '/content/category/linux'   
+						},
+						{       
+							text: 'english',
+							link: '/content/category/english'   
+						} 
+					] 				   
+				} */  
+			]  
 		}	
 	},
 	head() {
@@ -158,4 +152,15 @@ export default {
 </script>	 
 
 <style lang="postcss" scoped> 
+/* .navbar {@apply bg-green-500;} */
+html {@apply text-gray-600;}  
+body {@apply bg-black md:bg-red-100 lg:bg-white;}  
+/* main {@apply min-h-screen ;}  */
+
+h1 { @apply text-gray-500; }
+/* h1 { @apply text-red-500; }  */
+h2 { @apply text-blue-500; }
+h3 { @apply text-green-500; }    
+h4 { @apply text-indigo-500 text-lg uppercase; } 
+.a {@apply text-cyan-500 hover:text-red-500;} 
 </style>
