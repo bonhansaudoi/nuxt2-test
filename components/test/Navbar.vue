@@ -17,8 +17,6 @@
 			<div class="navbar-right
 				lg:flex lg:items-center lg:ml-auto lg:space-x-4"
 			> 
-				<icon-Search v-show="search" />  
-
 				<slot></slot>
 			</div>  
 		</div>
@@ -31,8 +29,7 @@ export default {
 		logo: Object,  
 		menuLink: Array,
 		dropdown: Array,
-		dropdownFull: Array,
-		search: Boolean
+		dropdownFull: Array, 
   } 
 }
 </script> 
@@ -64,7 +61,7 @@ body {@apply lg:pt-24;}
 			}  
 			& .modal-form {@apply bg-black md:bg-red-100 lg:bg-black;}
 			& .icon-auth {@apply hover:text-white;} 
-			& .form-signin, & .form-signup {@apply w-3/4 md:w-2/5 px-4 pb-4 space-y-4 lg:space-y-6 text-base;
+			& .form-signin, & .form-signup, & .form-password {@apply w-3/4 md:w-2/5 px-4 pb-4 space-y-4 lg:space-y-6 text-base;
 				& .form-header { 
 					& h2 {@apply text-center uppercase;}   
 				}

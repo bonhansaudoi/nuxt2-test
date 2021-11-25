@@ -7,6 +7,7 @@ mkdir assets/css/tailwind.css  chirst T@inguyen281186
 npm run dev 
 http://localhost:3000/test/test  Cart navbar.js modal.js
 
+modal
 false
 md: lg: space false green category id externalLink
 lg:flex lg:justify-between lg:items-center Globle

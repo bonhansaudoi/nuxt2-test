@@ -2,12 +2,8 @@
 	<div class="navbar-auth flex item-center">  
 		<div class="auth">  
 			<div class="flex space-x-4 ml-2">  
-				<icon-SigninIcon 
-					@open-signin="isModal=true, isSignin=true"
-					@open-password="isModal=true, isPassword=true"
-			 	/> 
-				 
-				<icon-SignupIcon @open-signup="isModal=true, isSignup=true" />
+				<icon-SigninIcon @open-signin="isModal=true, isSignin=true"/>  
+				<icon-SignupIcon @open-signup="isModal=true, isSignup=true"/>
 			</div>
 		</div>
 
@@ -18,34 +14,30 @@
 			</div>	 
 		</div> 
   <!--note fixed: modal center -->
-		<div class="modal center bg-black" v-show="isModal" @click="closeModal"> 
-			<form-SigninForm 
-				@click.stop
-				v-show="isSignin" 
-				@close-modal="isModal=false, isSignin=false" 
+		<div class="modal center bg-black" v-show="isModal" @click="closeModal"> 	
+			<form-SigninForm  
+				v-show="isSignin"  
+				@close-modal="closeModal" 
+				@open-password="isPassword=true, isSignin=false"
 			/>  
 			<form-SignupForm 
-				@click.stop
-				v-show="isSignup" 
-				@close-modal="isModal=false, isSignup=false" 
+				v-show="isSignup"  
+				@close-modal="closeModal" 
 			/>
 			<form-PasswordForm 
-				@click.stop
 				v-show="isPassword" 
-				@close-modal="isModal=false, isPassword=false" 
+				@close-modal="closeModal" 
 			/>   
 
 			<authed-BellSetting
-				@click.stop
 				v-show="isSetting"
-				@close-modal="isModal=false, isSetting=false"  
+				@close-modal="closeModal"  
 			/>  
 			<authed-UserProfile 
-				@click.stop
 				v-show="isProfile" 
-				@close-modal="isModal=false, isProfile=false" 
-			/> 
-		</div> 
+				@close-modal="closeModal" 
+			/>  	
+		</div>  
 	</div> 
 </template>  
 
@@ -54,23 +46,23 @@ export default {
 	data () {
 		return {
 			isModal: false,
-			isSetting: false,
-			isProfile: false,  
-
 			isSignin: false,  
 			isSignup: false,
 			isPassword: false,
+
+			isSetting: false,
+			isProfile: false,  
 		} 
 	},
 	methods: { 
 		closeModal () { 
 			this.isModal = false; 
-			this.isSetting = false,
-			this.isProfile = false;
-
 			this.isSignin = false;
 			this.isSignup = false;
 			this.isPassword = false;
+
+			this.isSetting = false,
+			this.isProfile = false; 
 		}
 	}
 } 

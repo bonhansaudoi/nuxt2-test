@@ -1,0 +1,77 @@
+<template> 
+	<div class="navbar-auth flex item-center">  
+		<div class="auth">  
+			<div class="flex space-x-4 ml-2">  
+				<icon-SigninIcon @open-signin="modal.isModal=true, modal.isSignin=true"/>  
+				<icon-SignupIcon @open-signup="modal.isModal=true, modal.isSignup=true"/>
+			</div>
+		</div>
+
+		<div class="authed hidden">
+			<div class="flex space-x-4 ml-2">  
+				<authed-Bell @open-setting="isModal=true, isSetting=true"/>  
+				<authed-User @open-profile="isModal=true, isProfile=true"/> 
+			</div>	 
+		</div> 
+  <!--note fixed: modal center -->
+		<div class="modal center bg-black" v-show="modal.isModal" @click="closeModal"> 	
+			<form-SigninForm  
+				v-show="modal.isSignin" 
+				@close-modal="closeModal" 
+				@open-password="modal.isPassword=true, modal.isSignin=false"
+			/>  
+			<form-SignupForm 
+				v-show="modal.isSignup" 
+				@close-modal="closeModal" 
+			/>
+			<form-PasswordForm 
+				v-show="modal.isPassword" 
+				@close-modal="closeModal" 
+			/>   
+
+			<authed-BellSetting
+				v-show="modal.isSetting"
+				@close-modal="closeModal"  
+			/>  
+			<authed-UserProfile 
+				v-show="modal.isProfile" 
+				@close-modal="closeModal" 
+			/>  	
+		</div>  
+	</div> 
+</template>  
+
+<script> 
+export default { 
+	data () {
+		return {
+			modal:{
+				isModal: false,
+				isSignin: false,  
+				isSignup: false,
+				isPassword: false,
+
+				isSetting: false,
+				isProfile: false,
+			}   
+		} 
+	},
+	methods: { 
+		closeModal () { 
+			var modal = this.modal;
+			for (i = 0; i < modal.length; i++) {
+				modal [i].setting= false; 
+				};    
+			}
+		 
+			// this.isModal = false; 
+			// this.isSignin = false;
+			// this.isSignup = false;
+			// this.isPassword = false;
+
+			// this.isSetting = false,
+			// this.isProfile = false; 
+		}
+	}
+} 
+</script>  

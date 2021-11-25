@@ -23,7 +23,8 @@ ul, ol {@apply ml-8 lg:text-lg lg:mb-6;}
 @layer utilities { 
 	.main, .canvas {@apply absolute inset-0 overflow-hidden;} 
 	.canvas {@apply z-60;}
-	.modal, .modal-form  {@apply fixed inset-0 z-70;}  
+	.modal, .modal-form, .modal-icon {@apply fixed inset-0 z-70;}  
+	.modal-content {@apply absolute inset-0;} 
 	.close ,.close-modal {@apply flex justify-end cursor-pointer text-2xl lg:text-4xl text-gray-400;}  
 	
 	.container-main {@apply p-4 md:p-6 space-y-4 md:space-y-6 lg:space-y-8;}

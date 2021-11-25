@@ -6,10 +6,10 @@
 					:logo="logo"  
 					:menuLink="menuLink"
 					:dropdown="dropdown" 
-					:dropdownFull ="dropdownFull" 
-					:search="search" 
+					:dropdownFull ="dropdownFull"  
 				>
-					<icon-NavbarIcon v-show="icon" /> 
+					<icon-Search/>  
+					<icon-NavbarIcon/> 
 					<NavbarAuth />
 				</test-navbar>
 			</client-only>
@@ -27,7 +27,7 @@ export default {
 	mounted () {},  
 	data () {
 		return { 
-			search: true, // false
+			// search: true, false
 			icon: true,  
 			logo: { 
 				text: '4WAO',

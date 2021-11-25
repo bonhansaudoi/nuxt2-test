@@ -2,8 +2,8 @@ export function modal() {
   var modal = document.querySelector(".modal-icon");
   var children = document.querySelector(".modal-content").children; 
   var closeBt = document.querySelectorAll(".close");
-  /* hidden content */
   var i;
+  /* hidden content */ 
   var btCart1 = document.querySelector(".btn-cart1");
   var contentCart1 = document.querySelector(".content-cart1");
 
@@ -28,7 +28,7 @@ export function modal() {
       closeModal();
     }
   }
-  
+
  ///////
   btCart1.onclick = function () { 
     modal.style.display = "block";
