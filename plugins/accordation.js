@@ -20,7 +20,21 @@ function accordation() {
 				this.nextElementSibling.classList.toggle("hidden");
 			}
 		})
-	} 
-}
+	}
+	
+
+	window.onclick = function(event) {
+		if (!event.target.matches('.accordation-btn')) {
+			var c = document.getElementsByClassName("accordation-content");
+			var i;
+			for (i = 0; i < c.length; i++) {
+				var closeContent = c[i];
+				if (!closeContent.classList.contains('hidden')) {
+					closeContent.classList.add('hidden');
+				}
+			}
+		}	
+	}
+} 
 
 export { accordation }; 

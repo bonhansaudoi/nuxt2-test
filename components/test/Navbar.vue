@@ -61,7 +61,7 @@ body {@apply lg:pt-24;}
 			}  
 			& .modal-form {@apply bg-black md:bg-red-100 lg:bg-black;}
 			& .icon-auth {@apply hover:text-white;} 
-			& .form-signin, & .form-signup, & .form-password {@apply w-3/4 md:w-2/5 px-4 pb-4 space-y-4 lg:space-y-6 text-base;
+			& .v-form-signin, & .v-form-signup, & .v-form-password {@apply w-3/4 md:w-2/5 px-4 pb-4 space-y-4 lg:space-y-6 text-base;
 				& .form-header { 
 					& h2 {@apply text-center uppercase;}   
 				}

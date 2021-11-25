@@ -2,9 +2,9 @@
   <div>  
     <div class="container-col">  
       <aside class="lg:w-1/6">
-<!-- <client-only>
+<!--  
         <Sidebar />  
-</client-only> -->
+  -->
       </aside>
 
       <div class="lg:w-5/6 lg:mx-8">
@@ -47,45 +47,17 @@
             <a class="a" href="#">Lorem ipsum </a>
           </article>
 
-          <h2>accordation</h2> 
-          <article>
-            <h3>readmore</h3> 
-            <div class="accordation">
-              <div class="accordation-btn"> 
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
-                </p> 
-                <icon-ReadmoreIcon /> 
-              </div>   
-              <div class="accordation-content hidden">
-              
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
-                </p>  
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
-                </p>  
-              </div>    
-            </div>
+          <h2>accordion</h2> 
+          <post-V-accordion>
+            <h3>Readmore</h3>	  
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
+            </p> 
+            <icon-ReadmoreIcon /> 
 
-            <h3>readmore</h3>
-            <div class="accordation">
-              <div class="accordation-btn">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
-                </p> 
-                <icon-ReadmoreIcon /> 
-              </div>   
-              <div class="accordation-content hidden "
-              >
+            <template v-slot:content>
+              <article>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                   Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
@@ -98,9 +70,35 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                   Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
                 </p>  
-              </div>    
-            </div> 
-          </article>  
+              </article>
+            </template> 
+          </post-V-accordion>
+
+          <post-V-accordion>
+            <h3>Readmore</h3>	  
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
+            </p> 
+            <icon-ReadmoreIcon /> 
+
+            <template v-slot:content>
+              <article>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                  Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                  Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
+                </p>  
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                  Perspiciatis rem assumenda, ea hic perferendis est voluptatem laudantium magni debitis, amet libero? Iure ipsam vero autem reiciendis incidunt soluta doloribus voluptatem.
+                </p>  
+              </article>
+            </template> 
+          </post-V-accordion> 
         </div> 
       </div>  
     </div>  
@@ -108,11 +106,11 @@
 </template>
 
 <script>
-import {accordation} from "~/plugins/accordation";
+// import {accordion} from "~/plugins/accordion";
 export default {  
   layout: 'test', 
   mounted () {
-    accordation();
+    // accordion();
   },    	
 }
 
@@ -123,7 +121,7 @@ export default {
 
 <style lang="postcss">
 /* .article { @apply space-y-4 md:space-y-6;} 
-.accordation-btn { @apply cursor-pointer;} 
-.accordation-content { @apply space-y-4 md:space-y-6;} */
+.accordion-btn { @apply cursor-pointer;} 
+.accordion-content { @apply space-y-4 md:space-y-6;} */
 .readmore { @apply text-red-500;} 
 </style>  

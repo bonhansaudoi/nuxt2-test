@@ -1,7 +1,7 @@
 <template>  
-	<form class="form-signin Tborder" action="" method="post" @click.stop>
+	<form class="v-form-signin Tborder" action="" method="post" @click.stop>
 		<div class="form-header">
-			<span class="close" @click="$emit('close-modal')">&times;</span> 
+			<span class="v-close" @click="$emit('close-modal')">&times;</span> 
 			<h2>Login</h2>
 		</div>
 

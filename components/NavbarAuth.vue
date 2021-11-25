@@ -9,22 +9,22 @@
 
 		<div class="authed hidden">
 			<div class="flex space-x-4 ml-2">  
-				<authed-Bell @open-setting="isModal=true, isSetting=true"/>  
-				<authed-User @open-profile="isModal=true, isProfile=true"/> 
+				<authed-BellIcon @open-setting="isModal=true, isSetting=true"/>  
+				<authed-UserIcon @open-profile="isModal=true, isProfile=true"/> 
 			</div>	 
 		</div> 
   <!--note fixed: modal center -->
-		<div class="modal center bg-black" v-show="isModal" @click="closeModal"> 	
-			<form-SigninForm  
+		<div class="v-modal center bg-black" v-show="isModal" @click="closeModal"> 	
+			<modal-SigninForm  
 				v-show="isSignin"  
 				@close-modal="closeModal" 
 				@open-password="isPassword=true, isSignin=false"
 			/>  
-			<form-SignupForm 
+			<modal-SignupForm 
 				v-show="isSignup"  
 				@close-modal="closeModal" 
 			/>
-			<form-PasswordForm 
+			<modal-PasswordForm 
 				v-show="isPassword" 
 				@close-modal="closeModal" 
 			/>   

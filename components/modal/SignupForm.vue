@@ -1,8 +1,8 @@
 <template> 
 	<!-- <div class="modal-form center" @click="$emit('close-modal')">   -->
-		<form class="form-signup Tborder" action="" method="post" @click.stop>
+		<form class="v-form-signup Tborder" action="" method="post" @click.stop>
 			<div class="form-header">
-				<span class="close" @click="$emit('close-modal')">&times;</span> 
+				<span class="v-close" @click="$emit('close-modal')">&times;</span> 
 				<h2>SIGN UP</h2>
 			</div>
 

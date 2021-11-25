@@ -23,9 +23,9 @@ ul, ol {@apply ml-8 lg:text-lg lg:mb-6;}
 @layer utilities { 
 	.main, .canvas {@apply absolute inset-0 overflow-hidden;} 
 	.canvas {@apply z-60;}
-	.modal, .modal-form, .modal-icon {@apply fixed inset-0 z-70;}  
-	.modal-content {@apply absolute inset-0;} 
-	.close ,.close-modal {@apply flex justify-end cursor-pointer text-2xl lg:text-4xl text-gray-400;}  
+	.modal-icon, .v-modal, .modal {@apply fixed inset-0 z-70;} 
+	.modal-content {@apply absolute inset-0;}  
+	.close-modal, .v-close, .close {@apply flex justify-end cursor-pointer text-2xl lg:text-4xl text-gray-400;}  
 	
 	.container-main {@apply p-4 md:p-6 space-y-4 md:space-y-6 lg:space-y-8;}
 	.container-card {@apply lg:mx-auto m-4 md:m-6 lg:my-8 space-y-4 md:space-y-6 lg:space-y-8 border-2 rounded-2xl shadow-md border-gray-400;}
@@ -35,18 +35,4 @@ ul, ol {@apply ml-8 lg:text-lg lg:mb-6;}
 	.center-row {@apply flex flex-wrap justify-center;}  
 	.space {@apply space-y-4 md:space-y-6 lg:space-y-8;} 
 	.Tborder, .card { @apply border-2 rounded-lg shadow-md border-gray-400;}
-
-/* 	.navbar { @apply w-full lg:flex px-4 py-2 lg:text-lg;} 
-	.navbar-menu { @apply lg:flex lg:flex-row lg:flex-grow
-			lg:justify-between lg:items-center 
-			px-4 pt-16 pb-4 lg:p-0 mt-4 lg:mt-0
-			border-2 rounded-lg shadow-md border-gray-400 lg:border-none;
-	}  
-	 
-	.navbar-right { @apply lg:flex lg:items-center lg:ml-auto lg:space-x-4;}   
-	
-	.accordation-content { @apply md:mt-6 space-y-4 md:space-y-6;}
-	.accordation-btn, .dropdown-btn { @apply cursor-pointer;}  */
-
-	
 } 

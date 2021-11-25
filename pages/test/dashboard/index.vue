@@ -60,11 +60,11 @@
 </template> 
 
 <script>  
-import {accordation} from "~/plugins/accordation";
+// import {accordation} from "~/plugins/accordation";
 export default { 
 	layout: 'dashboard', 
 	mounted () {
-    accordation();
+    // accordation();
   },    	
   data() {
 		return {

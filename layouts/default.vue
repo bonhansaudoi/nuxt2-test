@@ -1,18 +1,13 @@
 <template>
 	<div>   
 		<main>  
-			<!-- <client-only> 
+			<client-only> 
 				<test-navbar 
 					:logo="logo"  
 					:menuLink="menuLink"
-					:dropdown="dropdown" 
-					:dropdownFull ="dropdownFull" 
-					:search="search" 
 				>
-					<icon-ShopIcon v-show="icon" /> 
-					<NavbarAuth />
 				</test-navbar>
-			</client-only> -->
+			</client-only>
 
 			<Nuxt />  
 
@@ -25,8 +20,6 @@
 export default {  
 	data () {
 		return {
-			search: true, 
-			icon: true,  
 			logo: { 
 				text: '4WAO',
 				link: '/',  
