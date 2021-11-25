@@ -60,8 +60,12 @@
 </template> 
 
 <script>  
+import {accordation} from "~/plugins/accordation";
 export default { 
-	layout: 'dashboard',  
+	layout: 'dashboard', 
+	mounted () {
+    accordation();
+  },    	
   data() {
 		return {
 			headLine: "Nuxt dashboard", 

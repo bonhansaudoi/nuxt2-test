@@ -9,7 +9,7 @@
 					:dropdownFull ="dropdownFull" 
 					:search="search" 
 				>
-					<icon-ShopIcon v-show="icon" /> 
+					<icon-NavbarIcon v-show="icon" /> 
 					<NavbarAuth />
 				</test-navbar>
 			</client-only>

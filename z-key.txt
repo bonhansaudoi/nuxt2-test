@@ -5,7 +5,7 @@ A D S L K J F
 cd code .  28
 mkdir assets/css/tailwind.css  chirst T@inguyen281186 
 npm run dev 
-http://localhost:3000/test/test  Cart navbar.js
+http://localhost:3000/test/test  Cart navbar.js modal.js
 
 false
 md: lg: space false green category id externalLink

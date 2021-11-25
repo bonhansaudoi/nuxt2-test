@@ -1,5 +1,5 @@
 <template>  
-  <form class="form-signup Tborder" action="" method="post" @click.stop>
+  <form class="form-signup Tborder" action="" method="post">
     <div class="form-header">
       <span class="close" @click="$emit('close-modal')">&times;</span> 
       <h2> reset Password </h2>

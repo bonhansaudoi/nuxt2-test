@@ -20,24 +20,29 @@
   <!--note fixed: modal center -->
 		<div class="modal center bg-black" v-show="isModal" @click="closeModal"> 
 			<form-SigninForm 
+				@click.stop
 				v-show="isSignin" 
 				@close-modal="isModal=false, isSignin=false" 
 			/>  
 			<form-SignupForm 
+				@click.stop
 				v-show="isSignup" 
 				@close-modal="isModal=false, isSignup=false" 
 			/>
 			<form-PasswordForm 
+				@click.stop
 				v-show="isPassword" 
 				@close-modal="isModal=false, isPassword=false" 
 			/>   
 
 			<authed-BellSetting
+				@click.stop
 				v-show="isSetting"
 				@close-modal="isModal=false, isSetting=false"  
 			/>  
 			<authed-UserProfile 
-				v-show="isProfile" @click.stop
+				@click.stop
+				v-show="isProfile" 
 				@close-modal="isModal=false, isProfile=false" 
 			/> 
 		</div> 

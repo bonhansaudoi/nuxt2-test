@@ -5,13 +5,12 @@
     >  
       <svg-Cart />
     </button>
- 
-    <div class="modal bg-gray-300" v-show="modal"> 
-      <div class="container-card lg:w-1/2"> 
+
+    <div class="modal bg-gray-300" v-show="modal" @click="modal=false"> 
+      <div class="container-card lg:w-1/2" @click.stop> 
         <span class="close" @click="modal=false">&times;</span> 
         <div class="content">
-          <div class="header-modal">
-            
+          <div class="header-modal"> 
             <h1>cart</h1>
           </div>
         </div> 

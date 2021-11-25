@@ -1,6 +1,6 @@
 <template>  
 	<!-- <div class="modal-form center" @click="$emit('close-modal')">   -->
-		<form class="form-signin Tborder" action="" method="post" @click.stop>
+		<form class="form-signin Tborder" action="" method="post">
 			<div class="form-header">
 				<span class="close" @click="$emit('close-modal')">&times;</span> 
 				<h2>Login</h2>
