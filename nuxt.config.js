@@ -1,5 +1,5 @@
 export default {
-	// target: 'static',
+	target: 'static',
 	
 	loading: {
 		color: 'blue',
